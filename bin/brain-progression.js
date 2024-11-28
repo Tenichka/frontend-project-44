@@ -1,5 +1,7 @@
-const name = "NAME"
+import {welcome} from './src/cli.js'
 import readlineSync from 'readline-sync'
+
+const name=welcome()
 
 
 const prog_len = Math.floor(Math.random() * 5+5)
@@ -34,4 +36,7 @@ if(prog_answer === prog_chain[prog_hidden_num].toString()){
 else{
     console.log(`'${prog_answer}' is wrong answer ;(. Correct answer was '${prog_chain[prog_hidden_num]}'.
 Let's try again, ${name}!`)
+    process.exit()
 }
+
+console.log(`Congratulations, ${name}!`)

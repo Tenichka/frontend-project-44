@@ -1,5 +1,7 @@
-const name = "NAME"
-import readlineSync from 'readline-sync';
+import {welcome} from './src/cli.js'
+import readlineSync from 'readline-sync'
+
+const name=welcome()
 
 
 const NOD_num1 = Math.floor(Math.random() * 100+1)
@@ -27,3 +29,5 @@ else{
 Let's try again, ${name}!`)
     process.exit()
 }
+
+console.log(`Congratulations, ${name}!`)

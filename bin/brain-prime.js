@@ -1,5 +1,7 @@
-const name = "NAME"
+import {welcome} from './src/cli.js'
 import readlineSync from 'readline-sync'
+
+const name=welcome()
 
 
 function isPrime(n) {
@@ -30,3 +32,5 @@ else{
 Let's try again, ${name}!`)
     process.exit()
 }
+
+console.log(`Congratulations, ${name}!`)
