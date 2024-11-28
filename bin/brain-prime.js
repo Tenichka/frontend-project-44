@@ -3,8 +3,8 @@ import readlineSync from 'readline-sync'
 
 const name=welcome()
 
-
-function isPrime(n) {
+for (let i = 0; i < 3; i++) {
+  function isPrime(n) {
     if (!Number.isInteger(n)) return false;
     if (n < 2) return false;
     for (let i = 2; i * i <= n; i++) {
@@ -13,7 +13,7 @@ function isPrime(n) {
     return true;
   }
 
-const prime_value = Math.floor(Math.random() * 100+1)
+  const prime_value = Math.floor(Math.random() * 100+1)
 
 console.log(`Answer "yes" if given number is prime. Otherwise answer "no".`)
 console.log(`Question: ${prime_value}`)
@@ -24,13 +24,14 @@ const prime_answer = readlineSync.question(`Your answer: `);
 //console.log('debug', isPrime(prime_value))
 
 if(prime_answer.toLowerCase() ==="yes" && isPrime(prime_value) || prime_answer.toLowerCase() ==="no" && !isPrime(prime_value)){
-    console.log("Correct!")
+  console.log("Correct!")
 }
 else{
-    console.log(
-`'${prime_answer}' is wrong answer ;(. Correct answer was '${prime_answer.toLowerCase()==="yes" ? "no":"yes"}'.
-Let's try again, ${name}!`)
+  console.log(
+    `'${prime_answer}' is wrong answer ;(. Correct answer was '${prime_answer.toLowerCase()==="yes" ? "no":"yes"}'.
+    Let's try again, ${name}!`)
     process.exit()
+  }
 }
-
+  
 console.log(`Congratulations, ${name}!`)

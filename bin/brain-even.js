@@ -3,9 +3,9 @@ import readlineSync from 'readline-sync'
 
 const name=welcome()
 
-
-const honest_rand = Math.floor(Math.random() * 100+1)
-
+for (let i = 0; i < 3; i++) {
+    const honest_rand = Math.floor(Math.random() * 100+1)
+    
 console.log(`Answer "yes" if the number is even, otherwise answer "no".`)
 console.log(`Question: ${honest_rand}`)
 
@@ -19,6 +19,7 @@ else{
 `'${honest_answer}' is wrong answer ;(. Correct answer was '${honest_answer.toLowerCase()==="yes" ? "no":"yes"}'.
 Let's try again, ${name}!`)
     process.exit()
+}
 }
 
 console.log(`Congratulations, ${name}!`)
